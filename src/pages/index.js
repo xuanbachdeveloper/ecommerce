@@ -46,14 +46,12 @@ export default function Home() {
           {products.map(product => {
             return (
               <div key={product.id} className={styles.card}>
-                <Link href={`/products/${product.id}`}>
-                  <Image className={styles.img} src={product.image} alt={`Preview of ${product.title}`} />
+                  <img className={styles.img} src={product.image} alt={`Preview of ${product.title}`} />
                   <h3>{product.title}</h3>
                   <p className={styles.cardDescription}>{product.description}</p>
                   <p>${product.price}</p>
-                </Link>
                 <p>
-                  <button className="snipcart-add-item"
+                  <button className= {`${styles.button} snipcart-add-item`} 
                     data-item-id={product.id}
                     data-item-image={product.image}
                     data-item-name={product.title}
