@@ -47,7 +47,7 @@ export default function Home() {
             return (
               <div key={product.id} className={styles.card}>
                 <Link href={`/products/${product.id}`}>
-                  <img className={styles.img} src={product.image} alt={`Preview of ${product.title}`} />
+                  <Image className={styles.img} src={product.image} alt={`Preview of ${product.title}`} />
                   <h3>{product.title}</h3>
                   <p className={styles.cardDescription}>{product.description}</p>
                   <p>${product.price}</p>
@@ -80,9 +80,6 @@ export default function Home() {
           </span>
         </a>
       </footer>
-      <script
-        src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
-        type="text/javascript"></script>
       <script async src="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.js" />
       <div hidden id="snipcart" data-api-key="NzMxYWUyMDItYzc5ZC00NDkzLWJhMDktYmMyMWE3MGMwNjk2NjM4MDQ1MTA5MDU5NTcyODg3" />
     </div>
